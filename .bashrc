@@ -1,4 +1,30 @@
-MYVIMRC=/Users/sergiu/.config/nvim/init.vim
-LOCALHOST=1
+source "$HOME/.cargo/env"
 
-alias vim="nvim"
+alias vim='nvim'
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias mkdir='mkdir -p'
+alias path='echo ${PATH//:/\\n}'
+alias du='du -kh'
+alias df='df -kh'
+
+alias la='ls -Al'               # show hidden files
+alias ls='ls -hF --color'	      # add colors for filetype recognition
+alias lx='ls -lXB'              # sort by extension
+alias lk='ls -lSr'              # sort by size
+alias lc='ls -lcr'		          # sort by change time  
+alias lu='ls -lur'		          # sort by access time   
+alias lr='ls -lR'               # recursive ls
+alias lt='ls -ltr'              # sort by date
+
+export MYVIMRC=/Users/sergiu/.config/nvim/init.vim
+export LOCALHOST=1
+
+# eternal history
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTTIMEFORMAT="[%F %T] "
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
