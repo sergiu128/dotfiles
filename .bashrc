@@ -20,6 +20,7 @@ alias lr='ls -lR'               # recursive ls
 alias lt='ls -ltr'              # sort by date
 
 alias gl='git log --pretty=format:"%C(yellow)%h%C(red)%x09%an%C(blue)%x09%ad%C(reset)%x09%s" --date=relative'
+alias gs='git status'
 
 export MYVIMRC=/Users/sergiu/.config/nvim/init.vim
 export LOCALHOST=1

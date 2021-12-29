@@ -29,7 +29,7 @@ nnoremap <s-l> :bn<CR>
 nnoremap <s-h> :bprev<CR>
 
 " close buffer
-nnoremap <s-d> :bp\|bd #<CR>
+nnoremap <s-d> :bp\|bd! #<CR>
 
 " automatically reload config
 nnoremap <leader>sv :source $MYVIMRC<CR>
@@ -46,6 +46,7 @@ filetype plugin indent on
 
 set updatetime=300          " default=4000
 
+set nofsync
 set autoread                " reload file on change on disk
 set mouse=a
 set encoding=utf-8
@@ -60,7 +61,7 @@ set history=50
 set autowrite
 set ignorecase
 set smartcase
-set hidden                  " show hidden buffers
+set hidden                  " keep hidden buffers
 set foldlevelstart=20       " never fold
 set foldmethod=syntax
 set foldnestmax=1
@@ -107,19 +108,82 @@ call plug#begin()
     " highlight the symbol and its references when holding the cursor.
     autocmd CursorHold * silent call CocActionAsync('highlight')
 
+    " use <c-space> to trigger completion
+    inoremap <silent><expr> <c-space> coc#refresh()
+
+    " use <cr> to confirm completion
+    inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
     " language packs: syntax highlighting
     Plug 'sheerun/vim-polyglot'
 
-    " fuzzy finder and ripgrep from vim
-    Plug 'junegunn/fzf'
-    Plug 'BurntSushi/ripgrep'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+
+    " this restarts ripgrep whenever the query is updated, so fzf is a proxy
+    " instead of a fuzzy finder for grepping stuff
+    function! RipgrepFzf(query, fullscreen)
+        let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s ** || true'
+        let initial_command = printf(command_fmt, shellescape(a:query))
+        let reload_command = printf(command_fmt, '{q}')
+        let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+        call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+    endfunction
+
+    command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
     " fuzzy find files
-    nnoremap <c-o> :FZF<cr>
+    nnoremap <c-f> :FZF<cr>
 
     " rg through files in the current directory
-    nnoremap <c-p> :Rg<cr>
+    nnoremap <c-s> :RG<cr>
 
     Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-surround'
+    Plug 'ap/vim-buftabline'
+
+    Plug 'morhetz/gruvbox'
+    let g:gruvbox_contrast_dark='hard'
+
+    Plug 'universal-ctags/ctags'
+    Plug 'preservim/tagbar'
+    nmap <C-m> :TagbarToggle<CR>
+
+    Plug 'rust-lang/rust.vim'  
+
+    Plug 'nvim-lualine/lualine.nvim'
 call plug#end()
+
+set background=dark
+colorscheme gruvbox
+
+lua << END
+require'lualine'.setup {
+  options = {
+    icons_enabled = false,
+    theme = 'palenight',
+    component_separators = '',
+    section_separators = '',
+    disabled_filetypes = {},
+    always_divide_middle = true,
+  },
+  sections = {
+    lualine_a = {},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename', 'location', 'progress'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = {}
+}
+END
