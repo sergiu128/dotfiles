@@ -161,7 +161,7 @@ lua << END
 require'lualine'.setup {
   options = {
     icons_enabled = false,
-    theme = 'palenight',
+    theme = 'gruvbox_dark',
     component_separators = '',
     section_separators = '',
     disabled_filetypes = {},
@@ -172,7 +172,7 @@ require'lualine'.setup {
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename', 'location', 'progress'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
-    lualine_y = {'progress'},
+    lualine_y = {},
     lualine_z = {}
   },
   inactive_sections = {
