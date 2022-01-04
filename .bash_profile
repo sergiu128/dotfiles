@@ -9,7 +9,7 @@ setup_ssh () {
   pgrep ssh-agent > /dev/null
   if [ `echo $?` == 1 ]; then
     eval `ssh-agent -s` > /dev/null
-    eval `ssh-add` > /dev/null
+    ssh-add > /dev/null
   fi
 }
 
