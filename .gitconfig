@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = master
+[user]
+	email = sergiu128@protonmail.com
+	name = sergiu128
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "ssh://git@github.com"]
+	insteadOf = https://github.com/
