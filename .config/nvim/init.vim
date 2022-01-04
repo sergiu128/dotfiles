@@ -121,7 +121,7 @@ call plug#begin()
     Plug 'junegunn/fzf.vim'
 
     " this restarts ripgrep whenever the query is updated, so fzf is a proxy
-    " instead of a fuzzy finder for grepping stuff
+    " when using rg
     function! RipgrepFzf(query, fullscreen)
         let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s ** || true'
         let initial_command = printf(command_fmt, shellescape(a:query))
