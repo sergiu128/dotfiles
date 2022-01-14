@@ -149,7 +149,12 @@ call plug#begin()
     Plug 'preservim/tagbar'
     nmap <C-m> :TagbarToggle<CR>
 
+    " rust
     Plug 'rust-lang/rust.vim'  
+
+    " golang
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
     Plug 'nvim-lualine/lualine.nvim'
 call plug#end()
