@@ -5,12 +5,15 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 source "$HOME/.cargo/env"
 source "$HOME/.bashrc"
 
+export PATH=$PATH:~/go/bin:/usr/local/bin/python
+
 setup_ssh () {
   pgrep ssh-agent > /dev/null
   if [ `echo $?` == 1 ]; then
     eval `ssh-agent -s` > /dev/null
-    ssh-add > /dev/null
+    ssh-add
   fi
 }
 
 setup_ssh
+export PATH="/usr/local/opt/llvm/bin:$PATH"

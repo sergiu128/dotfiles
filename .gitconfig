@@ -9,3 +9,15 @@
 	insteadOf = https://github.com/
 [core]
 	editor = nvim
+[url "git@github.com:collect-capital/fcc.git"]
+	insteadOf = https://github.com/collect-capital/fcc
+[url "git@godump:collect-capital"]
+	insteadOf = https://github.com/collect-capital
+[url "git@github.com:collect-capital/gasio.git"]
+	insteadOf = https://github.com/collect-capital/gasio
+[url "git@github.com:collect-capital/nats.git"]
+	insteadOf = https://github.com/collect-capital/nats
+[url "git@github.com:collect-capital/settings_manager.git"]
+	insteadOf = https://github.com/collect-capital/settings_manager
+[url "git@github.com:collect-capital/zeromicro.git"]
+	insteadOf = https://github.com/collect-capital/zeromicro

@@ -151,12 +151,20 @@ call plug#begin()
 
     " rust
     Plug 'rust-lang/rust.vim'  
+    autocmd FileType rust nnoremap <C-r> :!cargo run<CR>
+    autocmd FileType rust nnoremap <C-c> :!cargo check<CR>
+    autocmd FileType rust nnoremap <C-b> :!cargo build<CR>
+    autocmd FileType rust nnoremap <C-t> :!cargo test<CR>
 
     " golang
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
+    autocmd FileType go nnoremap <C-r> :!go run .<CR>
+    autocmd FileType go nnoremap <C-b> :!go build<CR>
+    autocmd FileType go nnoremap <C-t> :!go test -v .<CR>
 
     Plug 'nvim-lualine/lualine.nvim'
+    Plug 'preservim/nerdcommenter'
 call plug#end()
 
 set background=dark
