@@ -22,7 +22,7 @@ alias lt='ls -ltr'              # sort by date
 alias python='/usr/local/bin/python3'
 alias pip='/usr/local/bin/pip3'
 
-alias gl='git log --pretty=format:"%C(yellow)%h%C(red)%x09%an%C(blue)%x09%ad%C(reset)%x09%s" --date=relative'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gs='git status'
 
 bind -x '"\C-f":"lf"'
