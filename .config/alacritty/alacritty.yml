@@ -2,7 +2,6 @@ env:
   TERM: xterm-256color
 
 window:
-  decorations: none
   title: alacritty
   instance: alacritty
   general: alacritty
