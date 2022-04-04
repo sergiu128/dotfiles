@@ -17,4 +17,4 @@ setup_ssh () {
 }
 
 setup_ssh
-export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:/$HOME/go:$PATH"

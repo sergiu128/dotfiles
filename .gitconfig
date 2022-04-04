@@ -1,5 +1,6 @@
 [init]
 	defaultBranch = master
+	templatedir = ~/.git-templates
 [user]
 	email = sergiu128@protonmail.com
 	name = sergiu128
@@ -21,3 +22,5 @@
 	insteadOf = https://github.com/collect-capital/settings_manager
 [url "git@github.com:collect-capital/zeromicro.git"]
 	insteadOf = https://github.com/collect-capital/zeromicro
+[url "git@github.com:collect-capital/ledger.git"]
+	insteadOf = https://github.com/collect-capital/ledger
