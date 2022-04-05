@@ -4,7 +4,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 source "$HOME/.cargo/env"
 source "$HOME/.bashrc"
-source "$HOME/nvm.sh"
 
 export PATH=$PATH:~/go/bin:/usr/local/bin/python
 
