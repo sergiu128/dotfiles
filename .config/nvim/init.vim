@@ -151,6 +151,7 @@ call plug#begin()
 
     " rust
     Plug 'rust-lang/rust.vim'  
+    Plug 'simrat39/rust-tools.nvim'
     autocmd FileType rust nnoremap <C-r> :!cargo run<CR>
     autocmd FileType rust nnoremap <C-c> :!cargo check<CR>
     autocmd FileType rust nnoremap <C-b> :!cargo build<CR>

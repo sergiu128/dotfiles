@@ -5,6 +5,7 @@ window:
   title: alacritty
   instance: alacritty
   general: alacritty
+  decorations: None
 
 scrolling:
   history: 99999
