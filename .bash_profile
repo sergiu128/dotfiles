@@ -1,3 +1,4 @@
+export PATH=$PATH:~/go/bin:/usr/local/bin/python:/opt/homebrew/bin
 export PS1='\[\e[1;32m\][sergiu@\h]\w\$\[\e[0m\] '
 eval "$(starship init bash)"
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -5,7 +6,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 source "$HOME/.cargo/env"
 source "$HOME/.bashrc"
 
-export PATH=$PATH:~/go/bin:/usr/local/bin/python
 
 setup_ssh () {
   pgrep ssh-agent > /dev/null
