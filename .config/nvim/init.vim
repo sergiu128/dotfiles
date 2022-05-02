@@ -133,10 +133,10 @@ call plug#begin()
     command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
     " fuzzy find files
-    nnoremap <c-f> :FZF<cr>
+    nnoremap <c-p> :FZF<cr>
 
     " rg through files in the current directory
-    nnoremap <c-s> :RG<cr>
+    nnoremap <c-f> :RG<cr>
 
     Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-surround'
