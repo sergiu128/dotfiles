@@ -133,10 +133,10 @@ call plug#begin()
     command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
     " fuzzy find files
-    nnoremap <c-p> :FZF<cr>
+    nnoremap <c-f> :FZF<cr>
 
     " rg through files in the current directory
-    nnoremap <c-f> :RG<cr>
+    nnoremap <c-s> :RG<cr>
 
     Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-surround'
@@ -166,6 +166,24 @@ call plug#begin()
 
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'preservim/nerdcommenter'
+
+    " c++
+    " syntax highlighting
+    Plug 'jackguo380/vim-lsp-cxx-highlight' 
+    let g:cpp_class_scope_highlight = 1
+    let g:cpp_member_variable_highlight = 1
+    let g:cpp_class_decl_highlight = 1
+
+    " linting
+    Plug 'vim-syntastic/syntastic'
+    let g:syntastic_cpp_checkers = ['cpplint']
+    let g:syntastic_c_checkers = ['cpplint']
+    let g:syntastic_cpp_cpplint_exec = 'cpplint'
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+
+    Plug 'rhysd/vim-clang-format'
+    nnoremap <Leader>f :<C-u>ClangFormat<CR>
 call plug#end()
 
 set background=dark
