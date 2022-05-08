@@ -143,7 +143,9 @@ call plug#begin()
     Plug 'ap/vim-buftabline'
 
     Plug 'morhetz/gruvbox'
+    Plug 'NLKNguyen/papercolor-theme'
     let g:gruvbox_contrast_dark='hard'
+
 
     Plug 'universal-ctags/ctags'
     Plug 'preservim/tagbar'
@@ -186,8 +188,13 @@ call plug#begin()
     nnoremap <Leader>f :<C-u>ClangFormat<CR>
 call plug#end()
 
-set background=dark
-colorscheme gruvbox
+set t_Co=256
+
+set background=light
+colorscheme PaperColor
+
+"set background=dark
+"colorscheme gruvbox
 
 lua << END
 require'lualine'.setup {
