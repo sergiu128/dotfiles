@@ -83,7 +83,7 @@ schemes:
       cyan:    '#8ec07c'
       white:   '#ebdbb2'
 
-colors: *PaperColorLight
+colors: *GruvboxDark
 
 key_bindings:
   - { key: Right, mods: Alt, chars: "\x1BF" }

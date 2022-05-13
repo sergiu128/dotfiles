@@ -2,7 +2,7 @@
 	defaultBranch = master
 	templatedir = ~/.git-templates
 [user]
-	email = sergiu128@protonmail.com
+	email = sergiu.marin@talostrading.com
 	name = sergiu128
 [url "git@github.com:"]
 	insteadOf = https://github.com/

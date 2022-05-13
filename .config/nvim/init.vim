@@ -188,13 +188,11 @@ call plug#begin()
     nnoremap <Leader>f :<C-u>ClangFormat<CR>
 call plug#end()
 
-set t_Co=256
+set background=dark
+colorscheme gruvbox
 
-set background=light
-colorscheme PaperColor
-
-"set background=dark
-"colorscheme gruvbox
+"set background=light
+"colorscheme PaperColor
 
 lua << END
 require'lualine'.setup {
