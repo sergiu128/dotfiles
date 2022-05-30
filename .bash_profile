@@ -1,3 +1,4 @@
+export PATH="/opt/homebrew/bin/python3:$PATH"
 export PATH="$PATH:~/go/bin:/usr/local/bin:/opt/homebrew/bin"
 export PATH="/usr/local/opt/llvm/bin:/$HOME/go:$PATH"
 
@@ -14,8 +15,6 @@ source "$HOME/.cargo/env"
 source "$HOME/.bashrc"
 source "$HOME/.private"
 
-echo '' >> /Users/sergiu/.bash_profile
-
 setup_ssh () {
   pgrep ssh-agent > /dev/null
   if [ `echo $?` == 1 ]; then
@@ -24,18 +23,7 @@ setup_ssh () {
   fi
 }
 
-### LOAD AVA ENVIRONMENT VARS
-if [ -f /Users/sergiu/code/talos/env/ava-vars.sh ]; then
-  source /Users/sergiu/code/talos/env/ava-vars.sh
-fi
-### END LOAD AVA ENVIRONMENT VARS
-
 setup_ssh
-
-
-
-
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/sergiu/google-cloud-sdk/path.bash.inc' ]; then . '/Users/sergiu/google-cloud-sdk/path.bash.inc'; fi
@@ -47,64 +35,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### LOAD AVA ENVIRONMENT VARS
+if [ -f /Users/sergiu/code/talos/env/ava-vars.sh ]; then
+  source /Users/sergiu/code/talos/env/ava-vars.sh
+fi
+### END LOAD AVA ENVIRONMENT VARS
