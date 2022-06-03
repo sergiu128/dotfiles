@@ -16,20 +16,14 @@ diverged = "<>"
 renamed = "r"
 deleted = "x"
 
-[aws]
-format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
-
 [cmake]
 format = '\[[$symbol($version)]($style)\]'
 
 [cmd_duration]
-format = '\[[$duration ]($style)\]'
+format = '\[[$duration]($style)\]'
 
 [deno]
 format = '\[[$symbol($version)]($style)\]'
-
-[docker_context]
-format = '\[[$symbol$context]($style)\]'
 
 [git_branch]
 format = '\[[$symbol$branch]($style)\]'
@@ -69,10 +63,6 @@ symbol = "rust "
 [scala]
 format = '\[[$symbol($version)]($style)\]'
 symbol = "scala "
-
-[terraform]
-format = '\[[$symbol$workspace]($style)\]'
-symbol = "terraform "
 
 [time]
 format = '\[[$time]\]'
