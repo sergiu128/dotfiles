@@ -5,24 +5,29 @@
             "filetypes": [
                 "c",
                 "cpp",
+                "hpp",
+                "h",
                 "objc",
                 "objcpp"
             ],
             "rootPatterns": [
                 ".ccls",
-                "compile_commands.json",
-                ".vim/",
-                ".git/",
-                ".hg/"
+                "build/compile_commands.json",
+                "compile_commands.json"
             ],
             "initializationOptions": {
                 "cache": {
-                    "directory": "/tmp/ccls"
+                    "directory": ".ccls-cache"
                 },
                 "index": {
-                    "onChange": true
+                    "onChange": false,
+                    "threads": 4
                 },
-                "highlight": { "lsRanges": true }
+                "highlight": { "lsRanges": true },
+                "compilationDatabaseDirectory": "build",
+                "clang": {
+                    "extraArgs": ["-std=c++-20"]
+                }
             }
         }
     }
