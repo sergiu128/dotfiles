@@ -5,7 +5,6 @@ window:
   title: alacritty
   instance: alacritty
   general: alacritty
-  decorations: None
 
 scrolling:
   history: 99999
@@ -14,7 +13,7 @@ font:
   normal:
     family: Hack Nerd Font Mono
     style: Regular
-  size: 13.0
+  size: 14.0
 
 draw_bold_text_with_bright_colors: true
 
@@ -83,7 +82,7 @@ schemes:
       cyan:    '#8ec07c'
       white:   '#ebdbb2'
 
-colors: *PaperColorLight
+colors: *GruvboxDark
 
 key_bindings:
   - { key: Right, mods: Alt, chars: "\x1BF" }
