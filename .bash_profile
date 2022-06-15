@@ -11,6 +11,9 @@ export PS1='\[\e[1;32m\][sergiu@\h]\w\$\[\e[0m\] '
 eval "$(starship init bash)"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+
 source "$HOME/.cargo/env"
 source "$HOME/.bashrc"
 source "$HOME/.private"
