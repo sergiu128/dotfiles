@@ -1,5 +1,8 @@
 command_timeout=750
 
+[gcloud]
+format=""
+
 [character]
 success_symbol = "[>](bold green)"
 error_symbol = "[x](bold red)"
