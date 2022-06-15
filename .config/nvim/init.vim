@@ -169,14 +169,13 @@ call plug#begin()
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'preservim/nerdcommenter'
 
-    " c++
-    " syntax highlighting
+    " c++ syntax highlighting
     Plug 'jackguo380/vim-lsp-cxx-highlight' 
     let g:cpp_class_scope_highlight = 1
     let g:cpp_member_variable_highlight = 1
     let g:cpp_class_decl_highlight = 1
 
-    " linting
+    " c++ linting
     Plug 'vim-syntastic/syntastic'
     let g:syntastic_cpp_checkers = ['cpplint']
     let g:syntastic_c_checkers = ['cpplint']
@@ -184,8 +183,12 @@ call plug#begin()
     let g:syntastic_check_on_open = 1
     let g:syntastic_check_on_wq = 0
 
-    Plug 'rhysd/vim-clang-format'
-    nnoremap <Leader>f :<C-u>ClangFormat<CR>
+    " c++ formatting with clang-format
+    Plug 'sbdchd/neoformat'
+    augroup fmt
+        autocmd!
+        autocmd BufWritePre * undojoin | Neoformat
+    augroup END
 call plug#end()
 
 set background=dark

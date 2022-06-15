@@ -20,13 +20,11 @@
                     "directory": ".ccls-cache"
                 },
                 "index": {
-                    "onChange": false,
+                    "onChange": true,
                     "threads": 4
                 },
-                "highlight": { "lsRanges": true },
-                "compilationDatabaseDirectory": "build",
-                "clang": {
-                    "extraArgs": ["-std=c++-20"]
+                "highlight": {
+                    "lsRanges": true
                 }
             }
         }
