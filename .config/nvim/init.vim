@@ -187,7 +187,7 @@ call plug#begin()
     Plug 'sbdchd/neoformat'
     augroup fmt
         autocmd!
-        autocmd BufWritePre * undojoin | Neoformat
+        autocmd BufWritePre *.cpp,*.hpp,*.c,*.h undojoin | Neoformat
     augroup END
 call plug#end()
 
