@@ -2,7 +2,6 @@ source "$HOME/.cargo/env"
 
 alias vim='nvim'
 
-alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
@@ -19,8 +18,8 @@ alias lu='ls -lur'		          # sort by access time
 alias lr='ls -lR'               # recursive ls
 alias lt='ls -ltr'              # sort by date
 
-alias python='/usr/local/bin/python3'
-alias pip='/usr/local/bin/pip3'
+alias python='python3'
+alias pip='pip3'
 
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gs='git status'
