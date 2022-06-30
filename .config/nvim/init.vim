@@ -85,6 +85,8 @@ autocmd BufReadPost *
             \ | endif
 
 call plug#begin()
+    Plug 'neovim/nvim-lspconfig'
+
     " host language servers
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 

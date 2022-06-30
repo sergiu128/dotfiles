@@ -22,7 +22,9 @@ alias python='python3'
 alias pip='pip3'
 
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gs='git status'
+alias gs="git status"
+
+alias make="make -j 20"
 
 bind -x '"\C-f":"lf"'
 
