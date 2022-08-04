@@ -52,7 +52,6 @@ set mouse=a
 set encoding=utf-8
 set undofile                " persistent undo
 set number
-set relativenumber
 set scrolloff=3
 set hlsearch
 set incsearch
@@ -70,6 +69,7 @@ set nowritebackup
 set timeout
 set timeoutlen=3000
 set ttimeoutlen=100
+set colorcolumn=80
 syntax on
 
 " display ASCII characters numerically
@@ -154,6 +154,7 @@ call plug#begin()
     nmap <C-m> :TagbarToggle<CR>
 
     " rust
+    Plug 'neovim/nvim-lspconfig'
     Plug 'rust-lang/rust.vim'  
     Plug 'simrat39/rust-tools.nvim'
     autocmd FileType rust nnoremap <C-r> :!cargo run<CR>
