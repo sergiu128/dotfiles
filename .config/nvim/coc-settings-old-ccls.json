@@ -1,0 +1,31 @@
+//{
+    //"languageserver": {
+        //"ccls": {
+            //"command": "ccls",
+            //"filetypes": [
+                //"c",
+                //"cpp",
+                //"hpp",
+                //"h",
+                //"objc",
+                //"objcpp"
+            //],
+            //"rootPatterns": [
+                //".ccls",
+                //"build/compile_commands.json"
+            //],
+            //"initializationOptions": {
+                //"cache": {
+                    //"directory": ".ccls-cache"
+                //},
+                //"index": {
+                    //"onChange": true,
+                    //"threads": 4
+                //},
+                //"highlight": {
+                    //"lsRanges": true
+                //}
+            //}
+        //}
+    //}
+//}
