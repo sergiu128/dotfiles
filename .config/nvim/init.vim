@@ -144,10 +144,10 @@ call plug#begin()
     Plug 'tpope/vim-surround'
     Plug 'ap/vim-buftabline'
 
+    " themes
     Plug 'morhetz/gruvbox'
     Plug 'NLKNguyen/papercolor-theme'
     let g:gruvbox_contrast_dark='hard'
-
 
     Plug 'universal-ctags/ctags'
     Plug 'preservim/tagbar'
@@ -196,6 +196,9 @@ call plug#end()
 
 set background=dark
 colorscheme gruvbox
+
+"set background=light
+"colorscheme PaperColor
 
 lua << END
 require'lualine'.setup {
