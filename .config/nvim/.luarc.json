@@ -1,0 +1,19 @@
+{
+    "workspace.library": [
+        "/Users/sergiu/.config/nvim",
+        "/Users/sergiu/.local/share/nvim/lazy/lazy.nvim",
+        "/Users/sergiu/.local/share/nvim/lazy/which-key.nvim",
+        "/Users/sergiu/.local/share/nvim/lazy/nvim-lspconfig",
+        "/Users/sergiu/.local/share/nvim/lazy/neodev.nvim",
+        "/Users/sergiu/.local/share/nvim/lazy/nvim-treesitter",
+        "/Users/sergiu/.local/share/nvim/lazy/mason-lspconfig.nvim",
+        "/Users/sergiu/.local/share/nvim/lazy/mason.nvim",
+        "/Users/sergiu/.local/share/nvim/lazy/gruvbox.nvim",
+        "/opt/homebrew/Cellar/neovim/0.9.0/share/nvim/runtime",
+        "/opt/homebrew/Cellar/neovim/0.9.0/share/nvim/runtime/pack/dist/opt/matchit",
+        "/opt/homebrew/Cellar/neovim/0.9.0/lib/nvim",
+        "/Users/sergiu/.local/state/nvim/lazy/readme",
+        "${3rd}/luassert/library",
+        "${3rd}/luv/library"
+    ]
+}
